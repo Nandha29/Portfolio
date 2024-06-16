@@ -1,22 +1,22 @@
 import "./App.css";
+import SideNavbar from "./navbar/SideNavbar";
+import Navbar from "./navbar/SideNavbar";
+import Pages from "./pages/Pages";
+import RoutingList from "./routes/RoutingList";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
-  const toggleTheme = () => {
-    document.body.classList.toggle("dark");
-  };
-
   return (
-    <div className="h-screen w-screen flex flex-col justify-center items-center theme">
-      <h1 className="font-bold text-mainHeading">
-        Welcome to My Portfolio Website 🚀
-      </h1>
-      <p className="text-subHeading mt-4">
-        Here you can find all the information about me and my projects.
-      </p>
-      <button onClick={toggleTheme} className="mt-4 px-4 py-2 rounded-md theme">
-        Toggle Theme
-      </button>
-    </div>
+    <BrowserRouter>
+      <div className="flex theme">
+        <div className="h-screen">
+          <SideNavbar />
+        </div>
+        <div className="flex-grow p-4 ml-60">
+          <RoutingList />
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
