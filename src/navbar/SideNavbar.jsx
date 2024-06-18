@@ -56,7 +56,7 @@ const SideNavbar = () => {
   };
 
   return (
-    <div className={``}>
+    <div>
       <div className="p-4 flex">
         {openSideBar ? (
           <RiMenuFoldFill
