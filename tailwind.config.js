@@ -1,27 +1,18 @@
-const { button } = require("@material-tailwind/react");
-const withMT = require("@material-tailwind/react/utils/withMT");
-
-module.exports = withMT({
-  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-  darkMode: "class",
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
-      colors: {
-        "theme-bg-light": "#f9fafb",
-        "theme-bg-dark": "#121212",
-        "theme-text-light": "#121212",
-        "theme-text-dark": "#f9fafb",
-        "theme-border-light": "#e4e4e7",
-        "theme-border-dark": "#333",
-      },
-      fontSize: {
-        mainHeading: "2.5rem",
-        subHeading: "1.5rem",
-        para: "1rem",
-        small: "0.8rem",
-        button: "1rem",
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
   plugins: [],
-});
+};
