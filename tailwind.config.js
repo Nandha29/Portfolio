@@ -13,11 +13,9 @@ module.exports = {
         primary: '#1a202c',
         secondary: '#2d3748',
         accent: '#38b2ac',
-        // Add more custom colors as needed
       },
       spacing: {
         18: '4.5rem', // Example of custom spacing using rem
-        // Add more custom spacings as needed
       },
       // If you want to define font sizes in rem
       fontSize: {
@@ -26,7 +24,6 @@ module.exports = {
         base: '1rem', // 16px
         lg: '1.125rem', // 18px
         xl: '1.25rem', // 20px
-        // Add more sizes as needed
       },
       fontFamily: {
         sans: ['Roboto', 'Arial', 'sans-serif'],
@@ -50,7 +47,6 @@ module.exports = {
           left: '50%',
           transform: 'translate(-50%, -50%)',
         },
-        // Add more mixins as needed
       };
 
       addUtilities(newUtilities, ['responsive', 'hover']);
