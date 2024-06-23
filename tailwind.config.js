@@ -1,18 +1,55 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: false,
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        primary: '#1a202c',
+        secondary: '#2d3748',
+        accent: '#38b2ac',
+      },
+      spacing: {
+        18: '4.5rem', // Example of custom spacing using rem
+      },
+      // If you want to define font sizes in rem
+      fontSize: {
+        xs: '0.75rem', // 12px
+        sm: '0.875rem', // 14px
+        base: '1rem', // 16px
+        lg: '1.125rem', // 18px
+        xl: '1.25rem', // 20px
+      },
+      fontFamily: {
+        sans: ['Roboto', 'Arial', 'sans-serif'],
       },
     },
   },
-  plugins: [],
-}
+  variants: {
+    extend: {},
+  },
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.center-flex': {
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        },
+        '.absolute-center': {
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+        },
+      };
+
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
+};
