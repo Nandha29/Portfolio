@@ -28,7 +28,7 @@ export default function RootLayout({
           <div>
             <Sidebar />
           </div>
-          <div>{children}</div>
+          <div className="h-40 w-full">{children}</div>
         </div>
 
         {/* Temp */}

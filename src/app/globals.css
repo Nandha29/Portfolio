@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Theme Classes */
+@layer base {
+  .theme {
+    @apply text-text-light bg-background-light dark:text-text-dark dark:bg-background-dark;
+  }
+}

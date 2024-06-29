@@ -25,7 +25,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="bg-gray-400 text-white h-screen">
+    <div className="theme">
       {routes.map((route) => {
         return (
           <div
