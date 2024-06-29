@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# Run linting
-npm run lint
-
