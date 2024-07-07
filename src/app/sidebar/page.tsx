@@ -71,7 +71,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className={`theme-sidebar h-screen w-80`}>
+    <div className={`theme-sidebar h-screen w-80 hidden md:block`}>
       <div className="flex flex-col items-center justify-center px-5 py-6">
         <Avatar
           alt="Remy Sharp"
