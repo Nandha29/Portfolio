@@ -7,7 +7,6 @@ import {
   MdWork,
   MdLightbulb,
   MdDarkMode,
-  MdOutlineLightMode,
 } from "react-icons/md";
 import { FaGraduationCap } from "react-icons/fa";
 import { AiFillProject } from "react-icons/ai";
@@ -29,8 +28,6 @@ const Sidebar = () => {
       setTheme("dark");
     }
   };
-
-  console.log("router-----", router);
 
   const routes = [
     {
